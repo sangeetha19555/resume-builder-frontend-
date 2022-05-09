@@ -23,6 +23,8 @@ export const Template = () => {
       case "2": {
         return <Template2 />;
       }
+      default:
+        return <h1>No project match</h1>;
     }
   };
   return (
