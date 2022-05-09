@@ -64,6 +64,6 @@ export function ProtectedRoute(props) {
   if (localStorage.getItem("userInfo")) {
     return props.children;
   } else {
-    return <Navigate to="/mainpage" />;
+    return <Navigate to="/login" />;
   }
 }
