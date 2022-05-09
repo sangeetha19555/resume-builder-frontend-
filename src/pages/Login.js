@@ -1,0 +1,57 @@
+import React, { useEffect, useState } from "react";
+import { Form, Input, Button, message, Spin } from "antd";
+import "../resources/authentication.css";
+import "../resources/common.css";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { API } from "./API";
+export const Login = () => {
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+  const onFinish = async (values) => {
+    console.log(values);
+    setLoading(true);
+    try {
+      const user = await axios.post(`${API}api/user/login`, values);
+      message.success("Login Successfull");
+      localStorage.setItem("userInfo", JSON.stringify(user));
+      setLoading(false);
+      navigate("/home");
+    } catch (error) {
+      setLoading(false);
+      message.error("Login Failed");
+    }
+  };
+
+  useEffect(() => {
+    if (localStorage.getItem("userInfo")) {
+      navigate("/home");
+    }
+  });
+
+  return (
+    <div>
+      <div className="auth-parent">
+        {loading && <Spin size="large" className="loading_spin" />}
+        <Form layout="vertical" onFinish={onFinish}>
+          <h1>Login</h1>
+          <Form.Item name="username" label="Username">
+            <Input />
+          </Form.Item>
+
+          <Form.Item name="password" label="Password" type="password">
+            <Input.Password />
+          </Form.Item>
+
+          <div className="d-flex justify-content-sm-between  mb-2">
+            <Link to="/register">Click Here To Register</Link>
+
+            <Button type="primary" htmlType="submit" className="blackbutton">
+              Login
+            </Button>
+          </div>
+        </Form>
+      </div>
+    </div>
+  );
+};
