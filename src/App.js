@@ -12,10 +12,6 @@ import { MainPage } from "./pages/MainPage";
 function App() {
   return (
     <div className="App">
-      {/* <h1>Resume Builder</h1>
-      <button type="primary" className="button">
-        Primary Button
-      </button> */}
       <Routes>
         <Route
           path="/"
@@ -64,6 +60,6 @@ export function ProtectedRoute(props) {
   if (localStorage.getItem("userInfo")) {
     return props.children;
   } else {
-    return <Navigate to="/login" />;
+    return <Navigate to="/mainpage" />;
   }
 }
