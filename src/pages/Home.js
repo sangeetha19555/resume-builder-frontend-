@@ -14,15 +14,13 @@ export const Home = () => {
       title: "Highlighted Section Resume",
       image: template2img,
     },
-    {
-      title: "Highlighted Section Resume",
-      image: template2img,
-    },
   ];
   return (
     <div>
       <DefaultLayout>
-        <h2>Go to Profile and Enter your details</h2>
+        <h2 className="template-homepage__title">
+          Go to Profile and Enter your details
+        </h2>
         <div className="template-homepage-container">
           {templates.map((template, index) => {
             return (

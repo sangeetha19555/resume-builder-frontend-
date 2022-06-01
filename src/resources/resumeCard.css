@@ -1,0 +1,52 @@
+.resume_Container_div {
+  margin: 100px 0px 100px 0px;
+  background-color: rgba(12, 66, 158, 0.894);
+  text-align: center;
+  padding: 30px 0px;
+}
+.resume_Container_div h3 {
+  color: #fff;
+  margin-top: 20px;
+}
+.resume_Container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 50px;
+  padding: 40px 10px;
+}
+.resume_Container_box {
+  /* background-color: blue; */
+  margin: 20px;
+  padding: 20px 60px;
+}
+.resume_Container_box_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resume_Container_box_icon i {
+  font-size: 33px;
+  border: 2px solid rgb(240, 240, 240);
+  border-radius: 50%;
+  padding: 20px;
+  color: #fff;
+}
+.resume_Container_box_text {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.resume_Container_box_text h5 {
+  color: #fff;
+}
+/* resume_paracontent */
+.resume_paracontent {
+  margin: 0px 130px 130px 130px;
+}
+.resume_paracontent h4 {
+  font-size: 25px;
+  margin: 30px 0px 30px 0px;
+}
+.resume_paracontent p {
+  font-size: 17px;
+}

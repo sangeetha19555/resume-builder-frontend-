@@ -36,27 +36,34 @@ export const Register = () => {
     }
   });
   return (
-    <div className="auth-parent">
-      {loading && <Spin size="large" className="loading_spin" />}
-      <Form layout="vertical" onFinish={onFinish}>
-        <h1>Register</h1>
-        <Form.Item name="username" label="Username">
-          <Input />
-        </Form.Item>
-        <Form.Item name="password" label="Password" type="password">
-          <Input.Password />
-        </Form.Item>
-        <Form.Item name="cpassword" label="Confirm Password" type="password">
-          <Input.Password />
-        </Form.Item>
-        <div className="d-flex justify-content-sm-between mb-2">
-          <Link to="/login">Click Here To Login</Link>
+    <div className="login_signup_container">
+      <div className="login_signup_container_btn">
+        <Link to="/mainpage" className="login_signup_main_btn">
+          Back to Homepage
+        </Link>
+      </div>
+      <div className="auth-parent">
+        {loading && <Spin size="large" className="loading_spin" />}
+        <Form layout="vertical" onFinish={onFinish}>
+          <h1>Register</h1>
+          <Form.Item name="username" label="Username">
+            <Input />
+          </Form.Item>
+          <Form.Item name="password" label="Password" type="password">
+            <Input.Password />
+          </Form.Item>
+          <Form.Item name="cpassword" label="Confirm Password" type="password">
+            <Input.Password />
+          </Form.Item>
+          <div className="d-flex justify-content-sm-between mb-2">
+            <Link to="/login">Click Here To Login</Link>
 
-          <Button type="primary" htmlType="submit" className="blackbutton">
-            REGISTER
-          </Button>
-        </div>
-      </Form>
+            <Button type="primary" htmlType="submit" className="blackbutton">
+              REGISTER
+            </Button>
+          </div>
+        </Form>
+      </div>
     </div>
   );
 };

@@ -33,9 +33,9 @@ export const DefaultLayout = (props) => {
 
         <Dropdown overlay={menu} placement="bottomLeft">
           <Button className="menu-btn blackbutton">
-            <span>
+            {/* <span>
               <UserOutlined />
-            </span>
+            </span> */}
             <span> {user.data.username}</span>
           </Button>
         </Dropdown>

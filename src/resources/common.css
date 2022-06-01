@@ -31,9 +31,9 @@
 }
 
 @media screen and (max-width: 767px) {
-  body {
+  /* body {
     background-color: lightgreen;
-  }
+  } */
   .remove-btn {
     font-size: 22px;
     color: red;

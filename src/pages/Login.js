@@ -30,7 +30,12 @@ export const Login = () => {
   });
 
   return (
-    <div>
+    <div className="login_signup_container">
+      <div className="login_signup_container_btn">
+        <Link to="/mainpage" className="login_signup_main_btn">
+          Back to Homepage
+        </Link>
+      </div>
       <div className="auth-parent">
         {loading && <Spin size="large" className="loading_spin" />}
         <Form layout="vertical" onFinish={onFinish}>

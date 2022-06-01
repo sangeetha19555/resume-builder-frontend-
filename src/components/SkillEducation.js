@@ -116,9 +116,10 @@ export const SkillEducation = () => {
                     <Form.Item
                       {...restField}
                       name={[name, "rating"]}
+                      label="Rating out of 100"
                       rules={[{ required: true, message: "Missing rating" }]}
                     >
-                      <Input placeholder="Rating out of 10" />
+                      <Input placeholder="e.g 89" />
                     </Form.Item>
                   </div> */}
 

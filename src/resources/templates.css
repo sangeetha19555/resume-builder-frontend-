@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* home template styles */
 .template-homepage-container {
   display: flex;
@@ -47,11 +52,7 @@
 /* home template styles  ends*/
 
 /* template 1 styling starts */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 .template1-parent {
   padding: 50px 40px 20px 40px;
 }
@@ -98,18 +99,18 @@
 }
 
 @media screen and (max-width: 991px) {
-  body {
+  /* body {
     background-color: rgb(34, 186, 34);
-  }
+  } */
   .template-homepage-container {
     flex-direction: column;
     align-items: center;
   }
 }
 @media screen and (max-width: 600px) {
-  body {
+  /* body {
     background-color: rgb(34, 44, 186);
-  }
+  } */
   .template1-parent {
     padding: 20px 10px 20px 10px;
   }
